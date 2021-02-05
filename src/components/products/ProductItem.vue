@@ -1,13 +1,11 @@
 <template>
   <li>
     <h3>{{ brand.toUpperCase() }}</h3>
-    <img :src="imageUrl" alt="">
+    <img :src="imageUrl" :alt="brand + '_cg'">
     <h4>{{ title }}</h4>
     <div class="price-rating">
       <p class="price">${{ price }}</p>
       <span class="rating">{{ productRating }}</span>
-    </div>
-    <div>
     </div>
     <div class="actions">
       <base-button link :to="productDetailsLink">View Details</base-button>
@@ -20,9 +18,6 @@
 export default {
   props: ['_id', 'title', 'imageUrl', 'brand', 'rating', 'price'],
   computed: {
-    fullName() {
-      return `${this.firstName} ${this.lastName}`;
-    },
     productRating() {
       return '⭐'.repeat(this.rating);
     },

@@ -9,7 +9,7 @@ const router = createRouter({
   routes: [
     { path: '/', redirect: '/products' },
     { path: '/products', component: ProductsList },
-    { path: '/prodcuts/:id', component: ProductDetail },
+    { path: '/products/:id', component: ProductDetail },
     { path: '/:notFound(.*)', component: NotFound }
   ]
 });

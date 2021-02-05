@@ -15,8 +15,20 @@ export default {
     }
 
     console.log(data);
-    payload
-    context.commit('setProducts', data);
+    context.commit('setProducts', data.products);
+  },
+
+  async fetchProduct(context, { id }) {
+    const response = await fetch(`https://tractr-back.herokuapp.com/products/${id}`);
+    const data = await response.json();
+
+    if (!response.ok) {
+      const error = new Error(response.message || 'Failed to fetch.');
+      throw error;
+    }
+
+    console.log(data);
+    context.commit('setProduct', data.product);
   }
 };
 

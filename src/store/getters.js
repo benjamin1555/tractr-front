@@ -3,11 +3,11 @@ export default {
     return state.products;
   },
 
-  hasProducts(state) {
-    return state.products.length > 0;
+  product(state) {
+    return state.product;
   },
 
-  hasProduct(state) {
-    return state.product;
+  hasProducts(state) {
+    return state.products.length > 0;
   }
 };
