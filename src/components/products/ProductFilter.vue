@@ -7,6 +7,7 @@
           <label for="brand">Brand:</label>
           <select name="brand" id="brand" v-model="brand">
             <option value="" selected>-- Filter Brand --</option>
+            <option value="amd">Amd</option>
             <option value="asus">Asus</option>
             <option value="evga">Evga</option>
             <option value="msi">Msi</option>
