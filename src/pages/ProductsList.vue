@@ -31,7 +31,7 @@ export default {
     ProductFilter,
     ProductItem
   },
-  date() {
+  data() {
     return {
       isLoading: false
     }
