@@ -78,4 +78,11 @@ img {
 .actions {
   align-self: flex-end;
 }
+
+@media (min-width: 100px) and (max-width: 575px) {
+  img {
+    max-width: 90%;
+  }
+}
+
 </style>

@@ -119,4 +119,10 @@ img {
 .actions {
   display: flex;
 }
+
+@media (min-width: 100px) and (max-width: 575px) {
+  img {
+    max-width: 90%;
+  }
+}
 </style>
