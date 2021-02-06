@@ -8,15 +8,17 @@
       <div class="product-content" v-else-if="product && !isLoading">
         <h3>{{ product.brand.toUpperCase() }}</h3>
         <img :src="product.imageUrl" :alt="product.brand + '_cg'">
-        <h4>{{ product.title }}</h4>
-        <p class="memory">Memory: {{ product.memory }}GB</p>
-        <div class="price-rating">
-          <p class="price">${{ product.price }}</p>
-          <span class="rating">{{ productRating }}</span>
-        </div>
-        <div class="actions">
-          <base-button>Add to Cart</base-button>
-          <base-button mode="outline">Need Advice?</base-button>
+        <div class="bottom-card">
+          <h4>{{ product.title }}</h4>
+          <p class="memory">Memory: {{ product.memory }}GB</p>
+          <div class="price-rating">
+            <p class="price">${{ product.price }}</p>
+            <span class="rating">{{ productRating }}</span>
+          </div>
+          <div class="actions">
+            <base-button>Add to Cart</base-button>
+            <base-button mode="outline">Need Advice?</base-button>
+          </div>
         </div>
       </div>
       <div v-else>
@@ -72,6 +74,12 @@ export default {
   align-items: center;
   margin: 1rem 0;
   border: 1px solid #424242;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.bottom-card {
+  border: 0.5px solid #b3b3b3;
   border-radius: 5px;
   padding: 1rem;
 }
