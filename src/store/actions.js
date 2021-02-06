@@ -14,7 +14,6 @@ export default {
       throw error;
     }
 
-    console.log(data);
     context.commit('setProducts', data.products);
   },
 
@@ -27,7 +26,6 @@ export default {
       throw error;
     }
 
-    console.log(data);
     context.commit('setProduct', data.product);
   }
 };
